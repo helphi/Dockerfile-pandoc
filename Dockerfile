@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc:alpine-3.5
 
-RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
-    echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+RUN sed -i -e 's/v3\.5/edge/g' /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
 RUN apk --no-cache add texlive-full@testing \
     texlive-xetex@testing \
