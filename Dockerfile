@@ -3,8 +3,8 @@ FROM frolvlad/alpine-glibc:alpine-3.5
 RUN sed -i -e 's/v3\.5/edge/g' /etc/apk/repositories
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
-RUN apk --no-cache add texlive-full@testing \
-    texlive-xetex@testing \
+RUN apk --no-cache add texlive-full \
+    texlive-xetex \
     biber \
     make \
     rsync \
