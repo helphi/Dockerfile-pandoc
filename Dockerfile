@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-glibc:alpine-3.5
 
-RUN apk add biber\
+RUN apk --no-cache add biber\
     make\
     rsync\
     tar\
